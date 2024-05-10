@@ -1,0 +1,63 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header class="absolute w-full z-[99]">
+	<nav class="flex items-center justify-between p-5 mx-auto">
+		<a href="/">
+			<img src="/img/grupo-isco.png" class="h-[40px] md:h-[85px] "/>
+		</a>
+		<div class="hidden lg:flex gap-5 items-center ">
+			<HeaderLink href="/">Inicio</HeaderLink>
+			<HeaderLink href="/#nosotros">Nosotros</HeaderLink>
+			<HeaderLink href="/#servicios">Productos y Servicios</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="#contacto">Contacto</HeaderLink>
+			<div class="bg-white p-2 rounded-md">
+				<a href="tel:+523311841404">Llamar</a>
+			</div>
+		</div>
+		<div id="btn-menu" class="lg:hidden relative z-[99]">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</nav>
+	<div id="mobile-menu" class="hidden fixed top-0 right-0 h-full w-1/2 bg-gray-900 z-50 flex flex-col gap-3 p-10">
+			<HeaderLink href="/">Inicio</HeaderLink>
+			<HeaderLink href="/#nosotros">Nosotros</HeaderLink>
+			<HeaderLink href="/#servicios">Productos y Servicios</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="#contacto">Contacto</HeaderLink>
+			<div class="bg-white p-2 rounded-md">
+				<a href="#">WhatsApp</a>
+			</div>
+	</div>
+	
+</header>
+<script>
+	const menuButton =  document.querySelector('#btn-menu');
+	const menuMobile = document.querySelector('#mobile-menu');
+	const menuLinks =  document.querySelectorAll('#mobile-menu a')
+
+	function toggleMenu(){
+		menuButton?.classList.toggle('open')
+		menuMobile?.classList.toggle('hidden')
+		menuMobile?.classList.toggle('menu-show')
+	}
+
+
+	menuButton?.addEventListener('click', () => {
+		toggleMenu()
+	})
+
+	menuLinks.forEach(item =>  {
+		item.addEventListener('click', () => {
+			toggleMenu()
+		})
+	})
+
+
+</script>

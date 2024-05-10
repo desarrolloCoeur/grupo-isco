@@ -1,0 +1,101 @@
+---
+import Button from "./Button.astro";
+import Certificaciones from "./Certificaciones.astro";
+import Contador from "./Contador.astro";
+import ShapeContainer from "./ShapeContainer.astro";
+---
+
+<div class="bg-[#f3f7fb] pt-20 pb-36 px-2 md:px-6" id="nosotros">
+    <div class="flex flex-col md:flex-row gap-5 max-w-7xl mx-auto">
+        <div class="w-full md:w-1/2 lg:w-2/5">
+            <img src="/img/about.jpeg" class="block mx-auto" />
+        </div>
+        <div class="w-full md:w-1/2 lg:w-3/5">
+            <h5 class="text-[#0c4378] text-sm font-bold">ACERCA DE</h5>
+            <h1 class="text-4xl font-bold">
+                Grupo ISCO: Líder en Seguridad Electrónica en Jalisco
+            </h1>
+            <p>
+                La creación de Grupo ISCO se origina al detectar la necesidad en
+                el mercado de ofrecer un servicio profesional de Seguridad
+                Electrónica, eficiente y con vanguardia tecnológica.
+                Proporcionar a los ciudadanos y a las empresas la paz y
+                serenidad en su vida cotidiana al proteger lo más valioso para
+                ellos. Hacernos diferenciar el servicio y satisfactores de la
+                competencia.
+            </p>
+            <p>
+                Salimos al mercado del Estado de Jalisco, con la firme intención
+                de brindar el mejor servicio a nuestros clientes.
+            </p>
+            <div class="pt-6 pb-10 flex flex-col md:flex-row gap-5">
+                <div class=" w-20 md:w-[10%] bg-blue-100 rounded p-2">
+                    <img src="/img/certificados.png" class="w-full h-full object-contain"/>
+                </div>
+            
+                <div class="md:w-[90%]">
+                    <h4 class="text-2xl font-bold">Nuestras Certificaciones</h4>
+                    <Certificaciones />
+                </div>
+            </div>
+            <Button title="Llamar Ahora!" href="tel:+523311841404"/>
+        </div>
+    </div>
+</div>
+<div class="mt-[-100px]">
+    <ShapeContainer>
+        <div class="flex items-center justify-center w-full flex-wrap">
+            <Contador title="Años de experiencia" number="10" />
+            <Contador title="Proyectos ejecutados" number="90" />
+            <Contador title="Certificaciones de seguridad" number="6" />
+        </div>
+    </ShapeContainer>
+</div>
+<div class="container mx-auto my-32 px-2 md:px-6">
+    <h5 class="text-[#0c4378] text-sm font-bold">MISION Y VISION</h5>
+    <h2 class="text-4xl font-semibold max-w-[600px]">
+        Protegiendo y Transformando: Innovación con Propósito.
+    </h2>
+    <div class="flex flex-col md:flex-row gap-10 my-10">
+        <div class="w-full md:w-1/2 shadow-lg p-10 relative">
+            <img
+                src="/img/service-shape.png"
+                class="absolute right-0 -z-1 opacity-30"
+            />
+            <div class="relative z-10]">
+                <img
+                    src="/img/mision.png"
+                    class="w-[80px] bg-blue-100 rounded-sm p-3 mb-6"
+                />
+                <h2 class="text-2xl font-bold">Mision</h2>
+                <p>
+                    Consolidarnos como la empresa de Seguridad Electrónica más
+                    CONFIABLE de la región, ofreciendo las soluciones más
+                    avanzadas del mercado en TECNOLOGIA, para lograr el
+                    reconocimiento de la empresa número 1 en la región.
+                </p>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 shadow-lg p-10 relative">
+            <img
+                src="/img/service-shape.png"
+                class="absolute right-0 -z-1 opacity-30"
+            />
+            <div class="relative z-10]">
+                <img
+                    src="/img/vision.png"
+                    class="w-[80px] bg-blue-100 rounded-sm p-3 mb-6"
+                />
+                <h2 class="text-2xl font-bold">Vision</h2>
+                <p>
+                    Contribuir al crear un entorno seguro para ti, tu empresa y
+                    los que te rodean, generando serenidad y confianza a través
+                    de nuevas soluciones personalizadas de monitoreo,
+                    ciberseguridad, seguridad electrónica, sistemas contra
+                    incendio.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

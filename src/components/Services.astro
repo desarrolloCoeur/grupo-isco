@@ -1,0 +1,114 @@
+---
+const servicios = [
+    {
+        title: "Alarmas de Seguridad",
+        img: "/img/servicios/alarmas.jpeg",
+        subtitle: "Seguridad"
+    },
+    {
+        title: "Sistemas de integración nivel empresarial",
+        img: "/img/servicios/integracion.jpeg"
+    },
+    {
+        title: "Controles de Acceso",
+        img:"/img/servicios/control-acceso.jpeg"
+    },
+    {
+        title: "Cercos Fotovoltaicos", 
+        img: "/img/servicios/cercos-fotovoltaicos.avif"
+    },
+    {
+        title: "Circuito Cerrado de Televisión(CCTV)",
+        img: "/img/servicios/cctv.jpeg"
+    },
+    {
+        title: "Protección contra incendios",
+        img: "/img/servicios/proteccion-incendios.jpeg"
+    },
+    {
+        title: "GPS", 
+        img: "/img/servicios/senalizacion.jpeg"
+    },
+    {
+        title: "Cercos Electrificados",
+        img: "/img/servicios/cercos-electricos.avif"
+    },
+    {
+        title: "Centro de Monitoreo de Alarmas", 
+        img: "/img/servicios/centro-monitoreo.avif"
+    },
+    {
+        title: "Alarmas Sismicas",
+        img: "/img/servicios/alarmas-sismicas.jpeg"
+    },
+    {
+        title: "MXVR(Cámaras a bordo)", 
+        img: "/img/servicios/mxvr.jpeg"
+    },
+    {
+        title:  "Ciberseguridad", 
+        img: "/img/servicios/ciberseguridad.jpeg"
+    }
+];
+
+const negocios = [
+    {
+        title: 'Pantallas para exterior',
+        img: '/img/servicios/senalizacion.avif'
+    },
+    {
+        title: 'Pantallas para negocios',
+        img: '/img/servicios/pantallas-negocios.jpeg'
+    },
+    {
+        title: 'Video Wall',
+        img: '/img/servicios/video-wall.jpeg'
+    },
+]
+---
+
+<div class="container mx-auto px-2 md:px-6" id="servicios">
+    <h5 class="text-[#0c4378] text-sm font-bold">NUESTROS SERVICIOS</h5>
+    <h2 class="text-4xl font-bold mb-5 max-w-[600px]">Servicios de Seguridad Electrónica de Grupo ISCO</h2>
+    <!-- Slider main container -->
+    <div class="swiper mySwiper2 w-full h-full">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            {servicios.map((service) => 
+                <div class="swiper-slide" style={`background: linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url(${service.img}); background-size:cover; background-position:center;`}>
+                    <div class="w-auto h-[500px] flex items-end">
+                        <div class="pb-14 pl-6 pr-6">
+                            <h3 class="text-white font-bold text-3xl">{service.title}</h3>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev swiper-button-prev"></div>
+        <div class="swiper-button-next swiper-button-next"></div>
+    </div>
+</div>
+
+<div class="bg-[#f3f7fb] pt-20 pb-52 my-16 px-2 md:px-6">
+    <div class="max-w-7xl mx-auto">
+        <h5 class="text-[#0c4378] text-sm font-bold text-center">INNOVACIÓN PARA TU NEGOCIO</h5>
+        <h2 class="text-3xl font-bold text-center">Señalización Inteligente para Negocios</h2>
+        <div class="flex flex-col md:flex-row gap-7 mt-8">
+            {negocios.map((data) => 
+                <div class="w-full md:w-1/3" style={`background: linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url(${data.img}); background-size:cover; background-position:center;`}>
+                    <div class="w-full h-[380px] flex items-end">
+                        <div class="pb-10 w-full">
+                            <h3 class="text-white font-bold text-3xl text-center px-2">{data.title}</h3>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
+    </div>
+</div>
+<script src="../libs/slider.js"></script>

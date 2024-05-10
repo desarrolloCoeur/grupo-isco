@@ -1,0 +1,51 @@
+---
+import ShapeContainer from "./ShapeContainer.astro"
+
+const clientes = [
+    {
+        alt : "Oxl logo",
+        img: "/img/clientes/oxl.png"
+    },
+    {
+        alt : "Consejo de la Judicatura Federal logo",
+        img: "/img/clientes/cjf.jpg"
+    },
+    {
+        alt : "Alen logo",
+        img: "/img/clientes/alen.jpg"
+    },
+    {
+        alt : "Atlatec logo",
+        img: "/img/clientes/atlatec.png"
+    },
+    {
+        alt : "Colegio internacional SEK Guadalajarra logo",
+        img: "/img/clientes/colegio-internacional-sek-guadalajara-logo.jpeg"
+    },
+    {
+        alt : "Suprema Corte de Justicia logo",
+        img: "/img/clientes/suprema-corte-de-justicia.png"
+    },
+    
+]
+---
+<div class="mt-[-170px]">
+    <ShapeContainer>
+        <div class="swiper mySwiper3 w-full h-full">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper md:p-10">
+                <!-- Slides -->
+                {clientes.map((img) => 
+                <div class="swiper-slide">
+                    <div class="h-[70px] md:h-[110px] flex items-center">
+                        <img class="w-full h-full object-contain" src={img.img} alt={img.alt} /> 
+                    </div>
+                </div>)}
+            </div>
+        </div>
+        <div class="flex items-center gap-10">
+        </div>
+    </ShapeContainer>
+</div>
+
+<script src="../libs/slider-logos.js"></script>
