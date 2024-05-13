@@ -36,6 +36,9 @@ h1,h2,h3,h4,h5{
 	font-family: 'Helvetica';
 }
 
+p{
+	text-align: justify;
+}
 
 @font-face {
 	font-family: 'Karla';
@@ -193,3 +196,12 @@ h1,h2,h3,h4,h5{
 	transition-timing-function: ease-in-out;
   }
   
+
+  .mySwiper1 .swiper-pagination{
+	bottom: -10px !important;
+  }
+
+  .mySwiper1 {
+	overflow: inherit;
+	
+  }

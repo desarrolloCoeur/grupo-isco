@@ -11,6 +11,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
     direction: 'horizontal',
     loop: true,
+    autoHeight: true,
+
   
     // If we need pagination
     pagination: {
