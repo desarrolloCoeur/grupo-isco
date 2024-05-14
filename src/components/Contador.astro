@@ -2,11 +2,12 @@
 const {title, number} = Astro.props;
 ---
 
-<div class="w-1/2 text-center lg:w-1/3 text-white h-full flex flex-col justify-center">
+<div class="w-1/2 text-center lg:w-1/3 text-white h-full flex flex-col items-center justify-center my-10 md:my-0">
     <h5 class="text-white font-bold">
         {title}
     </h5>
-    <span class="text-7xl">
-        +{number}
-    </span>
+    <p class="text-7xl">
+        + <span class="num" target={number}>0</span>
+    </p>
 </div>
+<script src="../libs/counter.js"> </script>

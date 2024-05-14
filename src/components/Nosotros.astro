@@ -7,10 +7,10 @@ import ShapeContainer from "./ShapeContainer.astro";
 
 <div class="bg-[#f3f7fb] pt-20 pb-36 px-2 md:px-6" id="nosotros">
     <div class="flex flex-col md:flex-row gap-5 max-w-7xl mx-auto">
-        <div class="w-full md:w-1/2 lg:w-2/5">
-            <img src="/img/about.jpeg" class="block mx-auto" />
+        <div class="sm:w-full md:w-1/2 lg:w-2/5">
+            <img src="/img/about.jpeg" class="block mx-auto h-[350px] md:h-auto object-cover" />
         </div>
-        <div class="w-full md:w-1/2 lg:w-3/5">
+        <div class="sm:w-full md:w-1/2 lg:w-3/5">
             <h5 class="text-[#0c4378] text-sm font-bold">ACERCA DE</h5>
             <h1 class="text-4xl font-bold">
                 Grupo ISCO: Líder en Seguridad Electrónica en Jalisco
@@ -27,7 +27,6 @@ import ShapeContainer from "./ShapeContainer.astro";
                 de brindar el mejor servicio a nuestros clientes.
             </p>
             <div class="pt-6 pb-10">
-        
                 <div class="md:w-[70%]">
                     <h4 class="text-2xl font-bold mb-2">Nuestras Certificaciones</h4>
                     <Certificaciones />
@@ -52,7 +51,7 @@ import ShapeContainer from "./ShapeContainer.astro";
         Protegiendo y Transformando: Innovación con Propósito.
     </h2>
     <div class="flex flex-col md:flex-row gap-10 my-10">
-        <div class="w-full md:w-1/2 shadow-lg p-10 relative">
+        <div class="w-full md:w-1/2 shadow-lg p-4 md:p-10 relative">
             <img
                 src="/img/service-shape.png"
                 class="absolute right-0 -z-1 opacity-30"
@@ -72,12 +71,12 @@ import ShapeContainer from "./ShapeContainer.astro";
             </div>
         </div>
 
-        <div class="w-full md:w-1/2 shadow-lg p-10 relative">
+        <div class="w-full md:w-1/2 shadow-lg p-4 md:p-10 relative">
             <img
                 src="/img/service-shape.png"
                 class="absolute right-0 -z-1 opacity-30"
             />
-            <div class="relative z-10]">
+            <div class="relative z-10">
                 <img
                     src="/img/vision.png"
                     class="w-[80px] bg-blue-100 rounded-sm p-3 mb-6 hidden"
