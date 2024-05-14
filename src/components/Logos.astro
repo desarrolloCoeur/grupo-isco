@@ -32,23 +32,26 @@ const clientes = [
 <div class="mt-[-170px]">
     <div class="shadow-lg bg-white relative  min-h-[220px] max-w-6xl mx-auto rounded-sm py-10" >
         <img class="absolute right-0 -z-1 opacity-20" src="/img/bg-shape-right.png"/>
-        <div class="relative flex items-center w-full z-10 p-5 min-h-[220px] h-full">
+        <div class="relative flex items-center w-full z-10 p-5 min-h-[220px] h-full px-10">
             <div class="swiper mySwiper3 w-full h-full">
                 <!-- Additional required wrapper -->
-                <h2 class="px-10 text-3xl pb-4 md:pb-0 text-center md:text-left">Nuestros clientes</h2>
-                <div class="swiper-wrapper md:px-10 py-5">
+                <h2 class="text-3xl pb-4 md:pb-0 text-center md:text-left">Nuestros clientes</h2>
+                <div class="swiper-wrapper py-5">
                     <!-- Slides -->
                     {clientes.map((img) => 
                     <div class="swiper-slide">
-                        <div class="h-[70px] md:h-[110px] flex items-center">
-                            <img class="w-full h-full object-contain" src={img.img} alt={img.alt} /> 
+                        <div class="h-[100px] flex items-center justify-center px-10">
+                            <img class="w-full h-full object-contain mx-auto block" src={img.img} alt={img.alt} /> 
                         </div>
-                    </div>)}
+                    </div>
+                    )}
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-    </div>
         </div>
     </div>
+</div>
 
 
 <script src="../libs/slider-logos.js"></script>

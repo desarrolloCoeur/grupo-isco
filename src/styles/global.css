@@ -205,3 +205,10 @@ p{
 	overflow: inherit;
 	
   }
+
+  .mySwiper3 .swiper-button-prev{
+	left: 0 !important;
+  }
+  .mySwiper3 .swiper-button-next{
+	right: 0 !important;
+  }

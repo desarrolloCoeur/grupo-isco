@@ -1,14 +1,14 @@
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
+
 
 
 document.addEventListener( 'DOMContentLoaded', function() {
     const swiper3 = new Swiper('.mySwiper3', {
-        spaceBetween: 30,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
+        modules: [Navigation],
+       
         breakpoints: {
           640: {
             slidesPerView: 1,
@@ -26,6 +26,10 @@ document.addEventListener( 'DOMContentLoaded', function() {
             slidesPerView: 4,
             spaceBetween: 50,
           },
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
       });
 });
