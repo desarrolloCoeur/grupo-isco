@@ -30,10 +30,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<main>
 			<article>
 				<div class="hero-image relative">
-					<div class="absolute gradient-bg-2 top-0 bottom-0 left-0 right-0"></div>
+					<div class="absolute gradient-bg-2 top-0 bottom-0 left-0 right-0 "></div>
 					{heroImage && <img width={1920} height={510} src={heroImage} alt="" class="h-full object-cover max-h-[500px]"/>}
-					<div class="absolute bottom-0 p-5">
-						<h1 class="relative z-[999] text-white text-4xl font-bold max-w-[500px]">{title}</h1>
+					<div class="absolute bottom-0 p-5 max-w-5xl w-full left-0 right-0 mx-auto">
+						<h1 class="relative z-[10] text-white text-4xl font-bold max-w-[500px]">{title}</h1>
 						<div class="date text-white font-bold">
 							<FormattedDate date={pubDate} />
 							{
@@ -46,7 +46,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						</div>
 					</div>
 				</div>
-				<div class="prose max-w-5xl mx-auto pt-8 px-2 md:px-6">
+				<div class="prose max-w-5xl mx-auto pt-8 px-4 md:px-6">
 					<slot />
 				</div>
 			</article>
